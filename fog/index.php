@@ -219,7 +219,7 @@ if ($_POST) {
 				<p><a class="btn btn-normal pull-right next" href="#tab4" data-toggle="tab">下一步</a></p>
 			</div>
 			<!-- step 4 -->
-			<div class="tab-pane active" id="tab4">
+			<div class="tab-pane" id="tab4">
 				<div class="row">
 					<div class="span6 offset3">
 						<h3>请想象一下：自己现正处于这样的天气中</h3>
