@@ -15,16 +15,16 @@ if ($_POST) {
 <title>天气与情绪、反应时测试</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="http://libs.baidu.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="http://libs.baidu.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <style type="text/css">
 	.gamebox{margin: 50px 10px 0px 10px}
 	.flashbox{background-color: #eee; padding: 100px 0px 100px 0px;}
 	.flashbox-red{background-color: red; padding: 100px 0px 100px 0px;}
 	.gamebox .popover{position: relative; display: block; }
 	.carousel .carousel-caption{ padding: 5px 15px 5px 15px;}
-	.carousel .item img{ width: 480px; height: 320px}
+	.carousel .item img{ width: 480px; height: 320px; margin-top: 20px}
 	.tab-pane .form-inline{line-height: 200%;}
 	.tab-pane .form-inline:hover{ background-color: #eee;}
 	.tab-pane .form-inline .radio {width: 100px; }
@@ -39,7 +39,7 @@ if ($_POST) {
 	<form name="" action="" method="post">
 		<div class="tab-content"> 
 			<!-- step 1 -->
-			<div class="tab-pane active in" id="tab1">
+			<div class="tab-pane active" id="tab1">
 				<h3>欢迎您参与关于天气与情绪的研究</h3>
 				<p>本测试将研究天气对人情绪所产生的影响，以及与反应时间的关系。</p>
 				<p>在开始前，为了达到最佳效果，请尽可能减少环境的干扰。</p>
@@ -50,7 +50,7 @@ if ($_POST) {
 				<p><a class="btn btn-normal pull-right next" href="#tab2" data-toggle="tab">下一步</a></p>
 			</div>
 			<!-- step 2 -->
-			<div class="tab-pane fade" id="tab2">
+			<div class="tab-pane" id="tab2">
 				<h3>请根据您现在的心情状态进行选择</h3>
 
 				<p class="form-inline"><span class="title">害怕</span>
@@ -176,7 +176,7 @@ if ($_POST) {
 				<p><a class="btn btn-normal pull-right next" href="#tab3" data-toggle="tab">下一步</a></p>
 			</div>
 			<!-- step 3 -->
-			<div class="tab-pane fade" id="tab3">
+			<div class="tab-pane" id="tab3">
 				<h3>请如实填写您的信息</h3>
 				<p>我们不会记录您是谁，您填写的信息仅作为统计使用，请放心填写</p>
 				<p>您的性别：
@@ -219,18 +219,11 @@ if ($_POST) {
 				<p><a class="btn btn-normal pull-right next" href="#tab4" data-toggle="tab">下一步</a></p>
 			</div>
 			<!-- step 4 -->
-			<div class="tab-pane fade" id="tab4">
+			<div class="tab-pane active" id="tab4">
 				<div class="row">
 					<div class="span6 offset3">
 						<h3>请想象一下：自己现正处于这样的天气中</h3>
-						<div id="my_carousel" class="carousel slide">
-							<ol class="carousel-indicators">
-								<li data-target="#my_carousel" data-slide-to="0" class="active"></li>
-								<li data-target="#my_carousel" data-slide-to="1"></li>
-								<li data-target="#my_carousel" data-slide-to="2"></li>
-								<li data-target="#my_carousel" data-slide-to="3"></li>
-								<li data-target="#my_carousel" data-slide-to="4"></li>
-							</ol>
+						<div id="my_carousel" class="carousel">
 							<!-- Carousel items -->
 							<div class="carousel-inner" id="">
 								<div class="active item">
@@ -239,44 +232,40 @@ if ($_POST) {
 										<p></p>
 									</div>
 								</div>
-								<div class="item">
+								<div class="active item">
 									<img src="">
 									<div class="carousel-caption text-center">
 										<p></p>
 									</div>
 								</div>
-								<div class="item">
+								<div class="active item">
 									<img src="">
 									<div class="carousel-caption text-center">
 										<p></p>
 									</div>
 								</div>
-								<div class="item">
+								<div class="active item">
 									<img src="">
 									<div class="carousel-caption text-center">
 										<p></p>
 									</div>
 								</div>
-								<div class="item">
+								<div class="active item">
 									<img src="">
 									<div class="carousel-caption text-center">
 										<p></p>
 									</div>
 								</div>
 							</div>
-							<!-- Carousel nav --> 
-							<a class="carousel-control left" href="#my_carousel" data-slide="prev">&lsaquo;</a>
-							<a class="carousel-control right" href="#my_carousel" data-slide="next">&rsaquo;</a>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="span6 offset4"><p class="center">看完全部5张图片后，请点击“下一步”按钮</p></div>
-				</div>
+				<h5 class="text-center">请想象一下：自己现正处于这样的天气中</h5></p>
+				<p class="text-center">看完全部5张图片后，请点击“下一步”按钮</p>
 				<p><a class="btn btn-normal pull-right next" href="#tab5" data-toggle="tab">下一步</a></p>
 			</div>
 			
-			<div class="tab-pane fade" id="tab5">
+			<div class="tab-pane" id="tab5">
 				<h3>请根据您现在的情绪状态进行选择</h3>
 
 				<p class="form-inline"><span class="title">害怕</span>
@@ -404,7 +393,7 @@ if ($_POST) {
 				<p><a class="btn btn-normal pull-right next" href="#tab6" data-toggle="tab">下一步</a></p>
 			</div>
 			
-			<div class="tab-pane fade" id="tab6">
+			<div class="tab-pane" id="tab6">
 				<h3>最后，我们来做个测试反应速度的小游戏</h3>
 				<div class="row gamebox" >
 					<div class="span4 offset1">
@@ -467,12 +456,10 @@ $('#tab3 a.next').click(function(e) {
 		return false;
 	}
 	return true;
+
 });
 
 
-$('.carousel').carousel({
-  interval: 3000
-})
 $(document).ready(function() {
 	var user_group = parseInt(Math.random()*100) % 2;
 	// group=0 is bad!!
@@ -487,6 +474,7 @@ $(document).ready(function() {
 			$(val).next().children('p').text('北京：雾霾');
 		}
 	});
+
 });
 
 
