@@ -168,3 +168,4 @@ pip-log.txt
 # program ignore
 duyan/output/*.txt
 fog/output/*.txt
+*.mno

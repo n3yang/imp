@@ -200,7 +200,7 @@ if ($_POST) {
 						<option value="50+">大于50</option>
 					</select>
 				</p>
-				<p>在过去一年内，您经历过雾霾的天数：
+				<p>在过去一年内，您经历过雾霾天气的天数：
 					<select id="fog_times" name="fog_times" class="input-small">
 						<option value="0">没遇到</option>
 						<option value="1-3">1-3天</option>
