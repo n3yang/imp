@@ -491,7 +491,7 @@ $('#tab5 a.next').click(function(e) {
 
 
 
-var starttime=readytime=0;
+var starttime=readytime=pause_second=0;
 $('.flashbox').click(function(event) {
 	if (readytime) {
 		alert('还没有变换颜色，请不要作弊！：）');
